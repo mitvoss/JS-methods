@@ -15,6 +15,22 @@ console.log(currentDay);
 
 
 
+const hereAndNow = new Date();
+const hours = hereAndNow.getHours()
+const minutes = hereAndNow.getMinutes()
+console.log(hours);
+console.log(minutes)
+
+
 /* Opdracht 2 */
 // Format het date-object dat je bij de vorige vraag hebt gemaakt naar een leesbare datum
 // ---- Verwachte uitkomst: Tue Apr 06 2021 (afhankelijk van het moment)
+const longVersion = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+};
+
+const leesbaar = hereAndNow.toLocaleDateString('nl-NL',longVersion)
+console.log(leesbaar);
